@@ -29,6 +29,7 @@ import (
 	"github.com/gohugoio/hugo/markup/goldmark/tables"
 	"github.com/yuin/goldmark/util"
 
+	ruby "github.com/mi759/goldmark-ruby"
 	"github.com/yuin/goldmark"
 	emoji "github.com/yuin/goldmark-emoji"
 	"github.com/yuin/goldmark/ast"
@@ -161,6 +162,10 @@ func newMarkdown(pcfg converter.ProviderConfig) goldmark.Markdown {
 
 	if cfg.Extensions.Footnote {
 		extensions = append(extensions, extension.Footnote)
+	}
+
+	if cfg.Extensions.Ruby {
+		extensions = append(extensions, ruby.Ruby)
 	}
 
 	if cfg.Extensions.CJK.Enable {

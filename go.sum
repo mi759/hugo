@@ -378,6 +378,12 @@ github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWE
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/mattn/go-runewidth v0.0.9 h1:Lm995f3rfxdpd6TSmuVCHVb/QhupuXlYr8sCI/QdE+0=
 github.com/mattn/go-runewidth v0.0.9/go.mod h1:H031xJmbD/WCDINGzjvQ9THkh0rPKHF+m2gUSrubnMI=
+github.com/mi759/goldmark-ruby v0.0.0-20240323020816-44343aa0d92a h1:j3/ZHNWL+WAngbmKN6GctuAAQaiYleGNzqmf6+wpnNU=
+github.com/mi759/goldmark-ruby v0.0.0-20240323020816-44343aa0d92a/go.mod h1:VljNKrkugFfi1hGZgHGWZMnW3pTqG4jBdgmVT17lq9Y=
+github.com/mi759/goldmark-ruby v0.1.0 h1:9OXQx0pslzG26S5qGPCh+WISDs1trgV4yYvaKtXPhoU=
+github.com/mi759/goldmark-ruby v0.1.0/go.mod h1:VljNKrkugFfi1hGZgHGWZMnW3pTqG4jBdgmVT17lq9Y=
+github.com/mitchellh/hashstructure v1.1.0 h1:P6P1hdjqAAknpY/M1CGipelZgp+4y9ja9kmUZPXP+H0=
+github.com/mitchellh/hashstructure v1.1.0/go.mod h1:xUDAozZz0Wmdiufv0uyhnHkUTN6/6d8ulp4AwfLKrmA=
 github.com/mitchellh/mapstructure v1.5.1-0.20231216201459-8508981c8b6c h1:cqn374mizHuIWj+OSJCajGr/phAmuMug9qIX3l9CflE=
 github.com/mitchellh/mapstructure v1.5.1-0.20231216201459-8508981c8b6c/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 h1:RWengNIwukTxcDr9M+97sNutRR1RKhG96O6jWumTTnw=

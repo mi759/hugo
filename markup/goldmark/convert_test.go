@@ -148,6 +148,12 @@ date
 description
 : the description for the content.
 
+## Rubys
+
+{電子出版|でんししゅっぱん}を手軽に
+
+{電子出版|でん|し|しゅっ|ぱん}を手軽に
+
 
 ## 神真美好
 
@@ -205,6 +211,8 @@ unsafe = true
 	c.Assert(got, qt.Contains, `footnote.<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>`)
 	c.Assert(got, qt.Contains, `<div class="footnotes" role="doc-endnotes">`)
 	c.Assert(got, qt.Contains, `<dt>date</dt>`)
+	c.Assert(got, qt.Contains, `<ruby>電子出版<rt>でんししゅっぱん</rt></ruby>を手軽に`)
+	c.Assert(got, qt.Contains, `<ruby>電<rt>でん</rt>子<rt>し</rt>出<rt>しゅっ</rt>版<rt>ぱん</rt></ruby>を手軽に`)
 
 	toc, ok := b.(converter.TableOfContentsProvider)
 	c.Assert(ok, qt.Equals, true)

@@ -43,6 +43,7 @@ var Default = Config{
 		Linkify:         true,
 		LinkifyProtocol: "https",
 		TaskList:        true,
+		Ruby:            true,
 		CJK: CJK{
 			Enable:                   false,
 			EastAsianLineBreaks:      false,
@@ -142,6 +143,7 @@ type Extensions struct {
 	DefinitionList bool
 	Extras         Extras
 	Passthrough    Passthrough
+	Ruby           bool
 
 	// GitHub flavored markdown
 	Table           bool
