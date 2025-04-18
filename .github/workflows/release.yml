@@ -1,0 +1,33 @@
+name: Release
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGORELEASER_DEV_URL: https://github.com/gohugoio/hugoreleaser/releases/download/v0.60.0/hugoreleaser_0.60.0_linux-amd64.deb
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: feat/goldmark-ruby
+      - name: Install hugoreleaser
+        run: |
+          wget -O ${{ runner.temp }}/hugoreleaser.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugoreleaser.deb
+      - name: Build
+        run: hugoreleaser build
+      - name: Archive
+        run: hugorelaser archive
+      - name: Move archives
+        run: |
+          find dist -name *.deb | xargs -i cp {} ./release/
+          find dist -name *.zip | xargs -i cp {} ./release/
+      - name: Create Release
+        run: |
+          source hugoreleaser.env \
+          && gh release create $HUGORELEASER_TAG --generate-notes --target "feat/goldmark-ruby" ./release/*
